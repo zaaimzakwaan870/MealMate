@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MealMate</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">password</string>
+    <string name="register">Register</string>
+    <string name="click_to_login">Click to login</string>
+    <string name="click_to_register">Click to register</string>
+    <string name="logout">logout</string>
+    <string name="meal_mate">MealMate</string>
+    <string name="your_ideal_meal_companion">Your Ideal Meal Companion</string>
+    <string name="register_front">Register</string>
+    <string name="login_front">Login</string>
+</resources>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UploadActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp"
+            android:background="@drawable/green_border">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Upload Data"
+                android:textSize="30sp"
+                android:textAlignment="center"
+                android:textColor="@color/my_light_primary" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/addimage"
+                android:id="@+id/uploadImage"
+                android:layout_marginTop="10dp"
+                android:scaleType="fitCenter" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/uploadRecipe"
+                android:background="@drawable/green_border"
+                android:layout_marginTop="20dp"
+                android:padding="16dp"
+                android:hint="Enter Recipe Name"
+                android:gravity="start|center_vertical"
+                android:textColor="@color/my_light_primary" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:id="@+id/uploadDesc"
+                android:background="@drawable/green_border"
+                android:layout_marginTop="20dp"
+                android:padding="16dp"
+                android:hint="Enter Description"
+                android:gravity="start|center_vertical"
+                android:textColor="@color/my_light_primary" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:id="@+id/uploadIngredient"
+                android:background="@drawable/green_border"
+                android:layout_marginTop="20dp"
+                android:padding="16dp"
+                android:hint="Enter Ingredients"
+                android:gravity="start|center_vertical"
+                android:textColor="@color/my_light_primary" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Save"
+                android:id="@+id/saveButton"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"
+                app:cornerRadius="20dp" />
+
+
+                
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</ScrollView>

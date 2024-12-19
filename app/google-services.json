@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "1089156989892",
+    "firebase_url": "https://login-register-firebase-311de-default-rtdb.firebaseio.com",
+    "project_id": "login-register-firebase-311de",
+    "storage_bucket": "login-register-firebase-311de.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1089156989892:android:b0a65f7f33e8dcac4cda91",
+        "android_client_info": {
+          "package_name": "com.CET343.mealmate"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-aOTUocxscPLjVDYUaAx6tRsHMWHTBzw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1089156989892:android:3cd50a01783e32414cda91",
+        "android_client_info": {
+          "package_name": "com.CET343.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-aOTUocxscPLjVDYUaAx6tRsHMWHTBzw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1089156989892:android:98d12c723fa273594cda91",
+        "android_client_info": {
+          "package_name": "com.android.application"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-aOTUocxscPLjVDYUaAx6tRsHMWHTBzw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

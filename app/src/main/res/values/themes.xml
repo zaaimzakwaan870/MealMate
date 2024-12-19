@@ -1,0 +1,25 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MealMate" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/my_light_primary</item>
+        <item name="colorOnPrimary">@color/my_light_on_primary</item>
+
+        <item name="colorSecondary">@color/my_light_secondary</item>
+        <item name="colorOnSecondary">@color/my_light_on_secondary</item>
+    </style>
+
+    <!-- Action Bar. -->
+    <style name="Base.Theme.MealMate1" parent="Theme.Material3.DayNight">
+        <item name="colorPrimary">@color/my_light_primary</item>
+        <item name="colorOnPrimary">@color/my_light_on_primary</item>
+
+        <item name="colorSecondary">@color/my_light_secondary</item>
+        <item name="colorOnSecondary">@color/my_light_on_secondary</item>
+    </style>
+
+    <style name="roundedImageViewRounded">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+</resources>
