@@ -7,6 +7,7 @@
     <color name="purple_700">#FF5353</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
+    <color name="red">#c70000</color>
     <color name="my_light_primary">#4CAF50</color> <!-- Example color -->
     <color name="my_light_on_primary">#FFFFFF</color> <!-- Text color on primary -->
     <color name="my_light_secondary">#8BC34A</color> <!-- Lighter Green -->

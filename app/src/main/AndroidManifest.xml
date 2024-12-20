@@ -18,7 +18,7 @@
         <activity
             android:name=".DetailActivity"
             android:exported="false"
-            android:theme="@style/Base.Theme.MealMate1" />
+            android:theme="@style/Base.Theme.MealMate2" />
         <activity
             android:name=".UploadActivity"
             android:exported="false"

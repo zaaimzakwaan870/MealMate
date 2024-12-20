@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
-public class DetailActivity extends ComponentActivity {
+public class DetailActivity extends AppCompatActivity {
 
     TextView detailDesc, detailRecipe, detailIngredients;
     ImageView detailImage;
