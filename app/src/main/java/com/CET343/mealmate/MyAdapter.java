@@ -16,40 +16,39 @@ import com.bumptech.glide.Glide;
 
 import java.util.List;
 
-public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
-
+public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     private Context context;
     private List<DataClass> dataList;
+    public OnItemClickListener listener; // Make listener public
 
-    public MyAdapter(Context context, List<DataClass> dataList) {
+    public interface OnItemClickListener {
+        void onItemClick(DataClass dataClass);
+    }
+
+    // Constructor
+    public MyAdapter(Context context, List<DataClass> dataList, OnItemClickListener listener) {
         this.context = context;
         this.dataList = dataList;
+        this.listener = listener;
     }
 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_item, parent, false);
-        return new MyViewHolder(view);
+        View itemView = LayoutInflater.from(context).inflate(R.layout.recipe_item_layout, parent, false);
+        return new MyViewHolder(itemView);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        Glide.with(context).load(dataList.get(position).getDataImage()).into(holder.recImage);
-        holder.recRecipe.setText(dataList.get(position).getDataRecipe());
-        holder.recDesc.setText(dataList.get(position).getDataDesc());
-        holder.recIngredient.setText(dataList.get(position).getDataIngredients());
+        DataClass dataClass = dataList.get(position);
+        // Bind your data here, e.g.:
+        holder.title.setText(dataClass.getDataTitle());
+        // Other bindings
 
-        holder.recCard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(context, DetailActivity.class);
-                intent.putExtra("Image", dataList.get(holder.getAdapterPosition()).getDataImage());
-                intent.putExtra("Description", dataList.get(holder.getAdapterPosition()).getDataDesc());
-                intent.putExtra("Recipe", dataList.get(holder.getAdapterPosition()).getDataRecipe());
-                intent.putExtra("Ingredients", dataList.get(holder.getAdapterPosition()).getDataIngredients());
-
-                context.startActivity(intent);
+        holder.itemView.setOnClickListener(v -> {
+            if (listener != null) {
+                listener.onItemClick(dataClass);
             }
         });
     }
@@ -58,22 +57,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
     public int getItemCount() {
         return dataList.size();
     }
-}
 
-class MyViewHolder extends RecyclerView.ViewHolder{
+    // ViewHolder class
+    public static class MyViewHolder extends RecyclerView.ViewHolder {
+        TextView title;
 
-    ImageView recImage;
-    TextView recRecipe, recDesc, recIngredient;
-    CardView recCard;
-
-    public MyViewHolder(@NonNull View itemView) {
-        super(itemView);
-
-        recImage = itemView.findViewById(R.id.recImage);
-        recCard = itemView.findViewById(R.id.recCard);
-        recDesc = itemView.findViewById(R.id.recDesc);
-        recIngredient = itemView.findViewById(R.id.recIngredient);
-        recRecipe = itemView.findViewById(R.id.recRecipe);
-
+        public MyViewHolder(View itemView) {
+            super(itemView);
+            title = itemView.findViewById(R.id.recipeTitle); // Make sure this matches your layout
+        }
     }
 }

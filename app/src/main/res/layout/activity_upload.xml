@@ -59,20 +59,39 @@
                 android:background="@drawable/green_border"
                 android:layout_marginTop="20dp"
                 android:padding="16dp"
-                android:hint="Enter Instructions"
+                android:hint="Enter Description"
                 android:gravity="start|center_vertical"
                 android:textColor="@color/my_light_primary" />
 
-            <EditText
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:id="@+id/uploadIngredient"
-                android:background="@drawable/green_border"
-                android:layout_marginTop="20dp"
-                android:padding="16dp"
-                android:hint="Enter Ingredients"
-                android:gravity="start|center_vertical"
-                android:textColor="@color/my_light_primary" />
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ingredients"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp"
+                    android:textColor="@color/my_light_primary" />
+
+                <LinearLayout
+                    android:id="@+id/ingredientsContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+
+                <Button
+                    android:id="@+id/addIngredientButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Add Ingredient"
+                    android:layout_marginTop="8dp"
+                    android:textSize="16sp"
+                    app:cornerRadius="20dp" />
+            </LinearLayout>
 
             <Button
                 android:layout_width="match_parent"
@@ -83,13 +102,8 @@
                 android:layout_marginTop="20dp"
                 app:cornerRadius="20dp" />
 
-
-                
         </LinearLayout>
 
-
     </androidx.cardview.widget.CardView>
-
-
 
 </ScrollView>

@@ -1,0 +1,89 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RecipeDetailActivity">
+
+    <!-- Recipe Image -->
+    <ImageView
+        android:id="@+id/recipeImage"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_launcher_background"
+        android:scaleType="centerCrop"/>
+
+    <!-- Recipe Title -->
+    <EditText
+        android:id="@+id/recipeTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Recipe Title"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:enabled="false"
+        android:textColor="@android:color/black"
+        android:background="@null"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/recipeImage"/>
+
+    <!-- Recipe Description -->
+    <EditText
+        android:id="@+id/recipeDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Recipe Description"
+        android:textSize="16sp"
+        android:enabled="false"
+        android:textColor="@android:color/black"
+        android:background="@null"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/recipeTitle"/>
+
+    <!-- Recipe Ingredients - Dynamic Checkboxes will go here -->
+    <LinearLayout
+        android:id="@+id/ingredientsLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        android:textColor="@android:color/black"
+        android:background="@null"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/recipeDesc">
+    <!-- Checkboxes will be added dynamically here -->
+</LinearLayout>
+
+
+<Button
+android:id="@+id/addIngredientButton"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Add Ingredient"
+android:layout_marginTop="16dp"
+android:background="@null"
+android:textColor="@android:color/black"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@id/ingredientsLayout"/>
+
+    <!-- Edit/Save Button -->
+<Button
+android:id="@+id/editSaveButton"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Edit"
+android:layout_marginBottom="32dp"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>

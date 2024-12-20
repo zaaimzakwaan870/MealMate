@@ -3,8 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.CET343.mealmate">
 
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
 
     <application
         android:allowBackup="true"
@@ -15,6 +23,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         tools:targetApi="31">
+
+        <!-- Other activities here -->
         <activity
             android:name=".DetailActivity"
             android:exported="false"
@@ -29,7 +39,6 @@
             android:theme="@style/Base.Theme.MealMate">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -40,9 +49,15 @@
         <activity
             android:name=".Login"
             android:exported="true"
-            android:theme="@style/Base.Theme.MealMate"></activity>
+            android:theme="@style/Base.Theme.MealMate" />
         <activity
             android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Base.Theme.MealMate1" />
+
+        <!-- Add RecipeDetailActivity declaration here -->
+        <activity
+            android:name=".RecipeDetailActivity"
             android:exported="true"
             android:theme="@style/Base.Theme.MealMate1" />
 
