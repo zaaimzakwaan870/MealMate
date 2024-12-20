@@ -66,7 +66,7 @@ public class UploadActivity extends AppCompatActivity {
 
         // Open the image picker when the user clicks on the image view
         uploadImage.setOnClickListener(view -> {
-            Intent photoPicker = new Intent(Intent.ACTION_PICK);
+            Intent photoPicker = new Intent(Intent.ACTION_GET_CONTENT);
             photoPicker.setType("image/*");
             activityResultLauncher.launch(photoPicker);
         });

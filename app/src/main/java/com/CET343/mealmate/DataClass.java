@@ -2,13 +2,13 @@ package com.CET343.mealmate;
 
 public class DataClass {
 
-    private String dataTitle;
+    private String dataRecipe;
     private String dataDesc;
     private String dataIngredients;
     private String dataImage;
 
-    public String getDataTitle() {
-        return dataTitle;
+    public String getDataRecipe() {
+        return dataRecipe;
     }
 
     public String getDataDesc() {
@@ -23,10 +23,14 @@ public class DataClass {
         return dataImage;
     }
 
-    public DataClass(String dataTitle, String dataDesc, String dataIngredients, String dataImage) {
-        this.dataTitle = dataTitle;
+    public DataClass(String dataRecipe, String dataDesc, String dataIngredients, String dataImage) {
+        this.dataRecipe = dataRecipe;
         this.dataDesc = dataDesc;
         this.dataIngredients = dataIngredients;
         this.dataImage = dataImage;
+    }
+
+    public DataClass(){
+
     }
 }

@@ -15,12 +15,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         tools:targetApi="31">
-
+        <activity
+            android:name=".DetailActivity"
+            android:exported="false"
+            android:theme="@style/Base.Theme.MealMate1" />
         <activity
             android:name=".UploadActivity"
             android:exported="false"
-            android:theme="@style/Base.Theme.MealMate1"/>
-
+            android:theme="@style/Base.Theme.MealMate1" />
         <activity
             android:name=".WelcomeActivity"
             android:exported="true"
@@ -38,8 +40,7 @@
         <activity
             android:name=".Login"
             android:exported="true"
-            android:theme="@style/Base.Theme.MealMate">
-        </activity>
+            android:theme="@style/Base.Theme.MealMate"></activity>
         <activity
             android:name=".MainActivity"
             android:exported="true"
